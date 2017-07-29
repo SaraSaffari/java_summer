@@ -6,6 +6,8 @@ import java.util.Vector;
 
 public class School {
 	private String school_name;
+	boolean house;
+	int number_of_students;
 	ArrayList<String> courses;
 	ArrayList<String> houses;
 	Vector<String> students;
@@ -31,7 +33,7 @@ public class School {
 	}
 	public School(String _school_name) {setName(_school_name);}
 	public School(String _school_name, ArrayList<String> _houses, ArrayList<String> _courses
-			, Object object, Vector<String> _students, Vector<String> _professors)
+			, Vector<String> _students, Vector<String> _professors)
 	{
 		setName(_school_name);
 		setHouseNames(_houses);
@@ -40,10 +42,6 @@ public class School {
 		setProfessorNames(_professors);
 	}
 	
-	
-	
-	
-
 	public String getName() {
 		return school_name;
 	}

@@ -35,7 +35,7 @@ public class SchoolTest {
 		courses.add("Herbology");
 		courses.add("History of Magic");
 
-		hogwarts = new School("Hogwarts", null, courses, null, null, null);
+		hogwarts = new School("Hogwarts", null, courses, null, null);
 		ArrayList<String> actual = hogwarts.getCourseNames();
 		ArrayList<String> expected = courses;
 		Assert.assertArrayEquals(expected.toArray(), actual.toArray());
@@ -48,7 +48,7 @@ public class SchoolTest {
 		houses.add("Hufflepuff");
 		houses.add("Ravenclaw");
 		houses.add("Slytherin");
-		hogwarts = new School("Hogwarts", houses, null, null, null, null);
+		hogwarts = new School("Hogwarts", houses, null, null, null);
 		ArrayList<String> actual = hogwarts.getHouseNames();
 		ArrayList<String> expected = houses;
 		Assert.assertEquals(expected, actual);
@@ -61,7 +61,7 @@ public class SchoolTest {
 		students.add("Harry Potter");
 		students.add("Luna Lovegood");
 		students.add("Lucius Malfoy");
-		hogwarts = new School("Hogwarts", null, null, null, students, null);
+		hogwarts = new School("Hogwarts", null, null, students, null);
 		
 		Vector<String> actual = hogwarts.getStudentNames();
 		Vector<String> expected = students;
@@ -76,7 +76,7 @@ public class SchoolTest {
 		professors.add("Severus Snape");
 		professors.add("Albus Dumbledore");
 		professors.add("Minerva McGonnagol");
-		hogwarts = new School("Hogwarts", null, null, null, null, professors);
+		hogwarts = new School("Hogwarts", null, null, null, professors);
 		
 		Vector<String> actual = hogwarts.getProfessorNames();
 		Vector<String> expected = professors;

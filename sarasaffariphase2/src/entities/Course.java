@@ -10,7 +10,7 @@ public class Course {
 	private int year;
 	
 	public Course(String _course_name){setName(_course_name);}
-	public Course(String _course_name, String _professor_name, char _min_grade, int _year){
+	public Course(String _course_name, Professor _professor_name, Grade _min_grade, int _year){/////////
 		setName(_course_name);
 		setProffesorName(_professor_name);
 		setMinGrade(_min_grade);
@@ -25,26 +25,26 @@ public class Course {
 	public Vector<String> getStudentNames() {
 		return students;
 	}
-	public void setStudentNames(Vector<String> students) {
-		this.students = students;
+	public void setStudentNames(Vector<String> _students) {
+		students = _students;
 	}
-	public String getProfessorName() {
+	public Professor getProfessorName() {//////
 		return professor_name;
 	}
-	public void setProffesorName(String _Professor_name) {
-		this.professor_name = _Professor_name;
+	public void setProffesorName(Professor _Professor_name) {//////
+		professor_name = _Professor_name;
 	}
-	public char getMinGrade() {
+	public Grade getMinGrade() {///////
 		return min_grade;
 	}
-	public void setMinGrade(char _min_grade) {
-		this.min_grade = _min_grade;
+	public void setMinGrade(Grade _min_grade) {//////
+		min_grade = _min_grade;
 	}
 	public int getYear() {
 		return year;
 	}
-	public void setYear(int year) {
-		this.year = year;
+	public void setYear(int _year) {
+		year = _year;
 	}
 	
 }

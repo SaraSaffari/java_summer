@@ -47,22 +47,22 @@ public class School {
 	}
 	
 	//private field setter(s)
-	public void set_name(String school_name) {
-		this.school_name = school_name;
+	public void set_name(String _school_name) {
+		school_name = _school_name;
 	}
 	public void set_professor_Names(Vector<String> _professors) {
-		this.professors = _professors;
+		professors = _professors;
 	}
 	public void set_student_Names(Vector<String> _students) {
-		this.students = _students;	
+		students = _students;	
 	}
 	public void set_house_Names(ArrayList<String> _houses) {
-		this.houses = _houses;		
+		houses = _houses;		
 	}
 	public void set_course_Names(ArrayList<String> _courses) {
-		this.courses = _courses;
+		courses = _courses;
 	}
-	public void set_school_location(String school_location) {
-		this.school_location = school_location;
+	public void set_school_location(String _school_location) {
+		school_location = _school_location;
 	}
 }

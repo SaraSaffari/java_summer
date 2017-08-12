@@ -43,7 +43,21 @@ public class Main {
 		BloodStatus _blood_status = null;
 		
 		//now finally class person
-		Person p = new Person(_school_name, _number_of_students, h, _blood_status );
+		Person p = new Person(_school_name, _number_of_students, h, _blood_status);
+		
+	   
+		p.setBirthday("123");
+		p.setBloodStatus(BloodStatus.Muggle);
+		p.setName("gholam");
+		System.out.println(p.getName());
+		System.out.println(p.getStudentNumber());
+		System.out.println(p.getHouseName());
+		System.out.println(p.getBloodStatus());
+		System.out.println(p.getBirthday());
+		
+		
+	
+		
 	}
 
 }

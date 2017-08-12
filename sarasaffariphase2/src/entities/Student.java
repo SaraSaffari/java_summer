@@ -7,6 +7,11 @@ public class Student extends Person {
 	private Vector<Course> course;
 	private Vector<FinishedCourse> reportcard;
 	
+	//class constructors
+	public Student(Vector<Course> _course, Vector<FinishedCourse> _reportcard){
+		course = _course;
+		reportcard = _reportcard;
+	}
 	//private field getter(s)
 	public Vector<Course> get_course() {
 		return course;

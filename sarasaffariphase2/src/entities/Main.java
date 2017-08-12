@@ -45,18 +45,10 @@ public class Main {
 		//now finally class person
 		Person p = new Person(_school_name, _number_of_students, h, _blood_status);
 		
-		s.set_course_Names(all_courses);
-		s.set_house_Names(_houses);
-		s.set_name(_school_name);
-		s.set_professor_Names(_professors);
-		s.set_school_location(_school_location);
-		s.set_student_Names(_students);
-		System.out.println(s.get_name());
-		System.out.println(s.get_school_location());
-		System.out.println(s.get_courseNames());
-		System.out.println(s.get_houseNames());
-		System.out.println(s.get_professorNames());
-		System.out.println(s.get_studentNames());
+		pro.set_courses(_courses);
+		pro.set_note(_note);
+		System.out.println(pro.get_note());
+		System.out.println(pro.get_courses());
 
 	}
 

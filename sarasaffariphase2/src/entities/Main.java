@@ -31,12 +31,12 @@ public class Main {
 		//need to have class house before person
 		String _house_name = " ";
 		School _related_school = s;
-		Vector<Student> _all_students = new Vector<Student>();
+		Vector<Student> all_students = new Vector<Student>();
 		Professor _head_teacher = pro ;
 		ArrayList<String> _qualities = new ArrayList<String>();
 		Map<Integer,Course> _prefects = new HashMap<Integer,Course>();
 		//now we can have an object of class house
-		House h = new House(_house_name, _related_school, _all_students, _head_teacher, _qualities, _prefects);
+		House h = new House(_house_name, _related_school, all_students, _head_teacher, _qualities, _prefects);
 		System.out.println("we have an object of house class");
 		
 		//need to have blood status to create class person
@@ -45,11 +45,27 @@ public class Main {
 		//now finally class person
 		Person p = new Person(_school_name, _number_of_students, h, _blood_status);
 		
-		pro.set_courses(_courses);
+		/*pro.set_courses(_courses);
 		pro.set_note(_note);
 		System.out.println(pro.get_note());
 		System.out.println(pro.get_courses());
-
+*/
+		h.set_house_name(_school_name);
+		h.set_head_teacher(_head_teacher);
+		h.set_prefects(_prefects);
+		h.set_qualities(_qualities);
+		h.set_related_school(_related_school);
+		h.set_students(all_students);
+		System.out.println(h.get_house_name());
+		System.out.println(h.get_head_teacher());
+		System.out.println(h.get_prefects());
+		System.out.println(h.get_qualities());
+		System.out.println(h.get_related_school());
+		System.out.println(h.get_students());
+		
+		
+		
+		
 	}
 
 }

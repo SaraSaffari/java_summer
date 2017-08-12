@@ -13,12 +13,12 @@ public class Main {
 		boolean _house = false;
 		int _number_of_students = 0;
 		String _school_location = "  ";
-		ArrayList<String> _all_courses = new ArrayList<String>();
+		ArrayList<String> all_courses = new ArrayList<String>();
 		ArrayList<String> _houses = new ArrayList<String>();
 		Vector<String> _students = new Vector<String>();
 		Vector<String> _professors = new Vector<String>();
 		//now we can have an object of class school
-		School s = new School(_school_name, _houses, _all_courses, _students, _professors);
+		School s = new School(_school_name, _houses, all_courses, _students, _professors);
 		System.out.println("we have an object of school class");
 		
 		//need to have class professor before house
@@ -45,19 +45,19 @@ public class Main {
 		//now finally class person
 		Person p = new Person(_school_name, _number_of_students, h, _blood_status);
 		
-	   
-		p.setBirthday("123");
-		p.setBloodStatus(BloodStatus.Muggle);
-		p.setName("gholam");
-		System.out.println(p.getName());
-		System.out.println(p.getStudentNumber());
-		System.out.println(p.getHouseName());
-		System.out.println(p.getBloodStatus());
-		System.out.println(p.getBirthday());
-		
-		
-	
-		
+		s.set_course_Names(all_courses);
+		s.set_house_Names(_houses);
+		s.set_name(_school_name);
+		s.set_professor_Names(_professors);
+		s.set_school_location(_school_location);
+		s.set_student_Names(_students);
+		System.out.println(s.get_name());
+		System.out.println(s.get_school_location());
+		System.out.println(s.get_courseNames());
+		System.out.println(s.get_houseNames());
+		System.out.println(s.get_professorNames());
+		System.out.println(s.get_studentNames());
+
 	}
 
 }

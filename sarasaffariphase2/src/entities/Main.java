@@ -27,7 +27,7 @@ public class Main {
 				//now we can have an object of class professor 
 				Professor pro = new Professor(_courses, _note); 
 				System.out.println("we have an object of professor class");
-				
+		
 				//need to have class house before person
 				String _house_name = " ";
 				School _related_school = s;
@@ -47,20 +47,26 @@ public class Main {
 				
 				
 				
-				Vector<Course> course = new Vector<Course>();
-				Vector<FinishedCourse> reportcard = new Vector<FinishedCourse>();
-				School _school = s;
-				String birthday = " ";
-				Student st = new Student(course, reportcard);
-				st.set_course(course);
-				st.set_reportcard(reportcard);
-				st.setBirthday(birthday);
-				st.setSchool(_school);
-				System.out.println(st.get_course());
-				System.out.println(st.get_reportcard());
-				System.out.println(st.getBirthday());
-				System.out.println(st.getSchool());
-		
+				//need to have class professor before course
+				Map<Integer,Course> _courses1 = new HashMap<Integer,Course>();
+				String _note1 = " ";
+				//now we can have an object of class professor 
+				Professor pro1 = new Professor(_courses, _note); 
+				System.out.println("we have an object of professor class");
+				
+				String course_name = " ";
+				Vector<String> students = new Vector<String>();
+				Grade min_grade = Grade.P;
+				int year = 0;
+				Course co = new Course(course_name, pro1, min_grade, year);
+				co.setName(course_name);
+				co.setProffesorName(pro1);
+				co.setYear(year);
+				co.setMinGrade(min_grade);
+				System.out.println(co.getName());
+				System.out.println(co.getProfessorName());
+				System.out.println(co.getYear());
+				System.out.println(co.getMinGrade());
 	}
 
 }

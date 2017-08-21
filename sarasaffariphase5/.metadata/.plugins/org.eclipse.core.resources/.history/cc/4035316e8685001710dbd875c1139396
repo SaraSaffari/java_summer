@@ -1,0 +1,73 @@
+package services;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Vector;
+import entities.*;
+
+public class ProfessorService {
+	//fields
+	Vector<Professor> allProfessors;
+	
+	//constructors
+	public ProfessorService() {
+		allProfessors = new Vector<Professor>();
+	}
+	//methods
+	public void getData(String filename) throws IOException {
+
+		String line;
+        BufferedReader in;
+
+        in = new BufferedReader(new FileReader(filename));
+        line = in.readLine();
+
+        while(line != "$") //finish condition- $ means end of file
+        {
+        	line = in.readLine(); //getting professor's name
+        	String professorName = "";
+        	professorName = line;
+        	 
+        	boolean housed = false;
+        	
+        	line = in.readLine(); //getting professor's house
+        	if (line != "N/A") { 
+        		House h = new House(line);
+        		housed = true;
+        	}
+        	
+        	line = in.readLine(); //getting professor's blood status
+        	BloodStatus bs = null;
+        	bs = BloodStatus.valueOf(line);
+        		
+        	line = in.readLine(); //getting professor's school
+        	School s = new School(line, housed);
+        	
+        	line = in.readLine(); //getting professor's birthday 
+    		String birthday = "";
+       		birthday = line;
+       		
+           	line = in.readLine(); //getting professor's course
+           	String CourseName = "";
+           	line = CourseName;
+        	
+           	line =in.readLine(); //getting year
+           	double year = -1;
+           	year = Double.parseDouble(line);
+           	
+           	line = in.readLine(); //any comment about the professor
+           	String comment = "";
+           	comment = line;
+           	
+        	line = in.readLine(); //to get rid of * at the end of each school
+        	
+        	
+        	Student newStudent = new Student(studentName, h, bs, s, birthday, _courses, null);
+        	allStudents.add(newStudent);
+        	in.close();
+         }
+	}
+	}
+
+}

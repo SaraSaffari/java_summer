@@ -1,0 +1,52 @@
+package services;
+
+import java.util.Scanner;
+import java.util.Vector;
+
+import entities.*;
+
+public class SchoolService { //method for placing a new comer into one of 4 houses
+	
+	public House SortingHat(Student s){
+		String result = "";                                   //the chosen house's name
+		Vector<Integer> posibilities = new Vector<Integer>(); //chance for each school for a new comer
+															  //in this vector first number is chance for Gryffindor 
+															  //second is Slytherin, third is Ravenclaw, and forth is Hufflepuff
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Welcome to sorting serimony!");
+		System.out.println("Here is a quastionare to place you in one of four houses of Hagwarts.");
+		
+		System.out.println("1.Would you be a volinteere for something that you haven't tyied or even don't know what it is?(yes / no)");
+		String answer = scanner.nextLine();
+		if (answer == "yes"){ Gryffindor += 10;}
+		
+		System.out.println("2.Would you use your talanet, abilities and knowlage to deceive people?(yes / no)");
+		answer = scanner.nextLine();
+		if (answer == "yes"){ Slythrin += 10;}
+		
+		System.out.println("3.You have to work in a group.Would you dedicate your time and energy on the job?(yes / no)");
+		answer = scanner.nextLine();
+		if (answer == "yes"){ Hufflepuff +=10;}
+		
+		System.out.println("4.Are you capable of making right dicisions which are so important in a short period of time?(yes / no)");
+		answer = scanner.nextLine();
+		if (answer == "yes"){ Ravenclaw +=10;}
+		
+		System.out.println("5.Which is more important?(kindness / intelligence)");
+		answer = scanner.nextLine();
+		if (answer == "kindness"){ Gryffindor+=10;}
+		else { Ravenclaw += 10;}
+		
+		System.out.println("6.Which is more important?(patience / resourcefulness)");
+		answer = scanner.nextLine();
+		if (answer == "patience"){ Hufflepuff+=10;}
+		else { Slythrin += 10;}
+		
+		
+		House chosenHouse = new House();
+		chosenHouse.setName(result);
+		scanner.close();
+		return chosenHouse;
+	}
+}

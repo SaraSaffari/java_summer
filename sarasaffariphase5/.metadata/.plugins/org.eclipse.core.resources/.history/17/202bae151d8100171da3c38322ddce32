@@ -1,0 +1,139 @@
+//package entityTests;
+import java.util.*;
+import entities.*;
+
+public class CourseTest {
+
+	public void runTests()
+	{
+		//As a helper vector for testing the course, we make the students vector and add elements
+		Vector<Student> expected = new Vector<Student>();
+		expected.add(new Student("Harry Potter"));
+		expected.add(new Student("Ron Weasley"));
+		expected.add(new Student("Hermoine Granger"));
+		expected.add(new Student("Draco Malfoy"));
+		expected.add(new Student("Luna Lovegood"));
+
+		//The course we are testing. 
+		//While testing your work, please use more than one test case, this one is for demonstration only
+		Course course = new Course("Flying", Grades.O, 
+				new Professor("Madame Hooche"), 1994, expected);
+
+		//Printing the results of the tests of GETTERS and SETTERS
+		System.out.println("GET MIN GRADE  " + testgetMinGrade(course, Grades.O));
+		System.out.println("GET NAME       " + testgetName(course, "Flying"));
+		System.out.println("GET PROFESSOR  " + testgetProfessor(course,
+				new Professor("Madame Hooche")));
+		System.out.println("GET STUDENTS   " + testgetStudents(course, expected));
+		System.out.println("GET YEAR       " + testgetYear(course, 1994));				
+		System.out.println("SET MIN GRADE  " + testsetMinGrade(course));
+		System.out.println("SET GET NAME   " + testsetName(course));
+		System.out.println("SET PROFESSOR  " + testsetProfessor(course));
+		System.out.println("SET STUDENTS   " + testsetStudents(course));
+		System.out.println("SET YEAR       " + testsetYear(course));
+	}
+	public boolean testgetName(Course course, String expected){
+		String actual = course.getName();
+		
+		if(actual.equals(expected))
+			return true;
+		return false;
+	}
+
+	public boolean testgetMinGrade(Course course, Grades expected){
+
+		Grades actual = course.getMinGrade();
+		if(actual.equals(expected))
+			return true;
+
+		return false;
+	}
+	public boolean testgetProfessor(Course course, Professor expected){
+
+		Professor actual = course.getProfessor();
+
+		if(actual.getName().equals(expected.getName()))
+			return true;
+
+		return false;
+	}
+	public boolean testgetYear(Course course, int expected){
+
+		int actual = course.getYear();
+		if(actual == expected)
+			return true;
+
+		return false;
+	}
+	public boolean testgetStudents(Course course, Vector<Student> expected){
+		Vector<Student> actual = course.getStudents();
+		
+		if(actual.equals(expected))
+			return true;
+
+		return false;
+	}
+	public boolean testsetName(Course course)
+	{
+		String expected = "";
+		course.setName("");
+		String actual = course.getName();
+		if(actual.equals(expected))
+			return true;
+
+		String expected0 = "Dina";
+		course.setName("Dina");
+		String actual0 = course.getName();
+		if(actual0.equals(expected0))
+			return true;
+				
+		return false;
+	}
+	public boolean testsetMinGrade(Course course)
+	{
+		Grades expected = Grades.A;
+		course.setMinGrade(Grades.A);
+		Grades actual = course.getMinGrade();
+		if(actual.equals(expected))
+			return true;
+
+		return false;
+	}
+	public boolean testsetProfessor(Course course)
+	{
+		Professor expected = new Professor("Severus Snape");
+		course.setProfessor(expected);
+		Professor actual = course.getProfessor();
+		if(actual.equals(expected))
+			return true;
+
+		return false;
+	}
+	public boolean testsetYear(Course course)
+	{
+		int expected = 1994;
+		course.setYear(1994);
+		int actual = course.getYear();
+		if(actual == expected)
+			return true;
+
+		return false;
+	}
+	public boolean testsetStudents(Course course)
+	{
+		Vector<Student> expected = new Vector<Student>();
+		expected.add(new Student("Harry Potter"));
+		expected.add(new Student("Ron Weasley"));
+		expected.add(new Student("Hermoine Granger"));
+		expected.add(new Student("Draco Malfoy"));
+		expected.add(new Student("Luna Lovegood"));
+		
+		course.setStudents(expected);
+		Vector<Student> actual = course.getStudents();
+		
+		if(actual.equals(expected))
+			return true;
+
+		return false;
+	}
+}

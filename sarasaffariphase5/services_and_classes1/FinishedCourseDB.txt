@@ -1,0 +1,34 @@
+Harry Potter
+E
+false
+Potions
+O
+Severus Snape
+2000
+*
+Luna Lovegood
+O
+true
+Charms
+A
+Filius Flitwick
+1995
+*
+Lavender Brown
+O
+true
+Divination
+A
+Sybill Trelawney
+1999
+*
+Hermoine Granger
+O
+true
+Defense Against the Dark Arts
+E
+Remus Lupin
+1996
+*
+$
+

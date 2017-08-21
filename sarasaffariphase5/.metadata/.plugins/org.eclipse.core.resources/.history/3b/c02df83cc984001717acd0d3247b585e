@@ -1,0 +1,38 @@
+package services;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Vector;
+
+import entities.*;
+
+public class SchoolService {
+	
+	private Vector<School> allSchools;
+	//constructors
+	public SchoolService () {
+		Vector<School> allSchools = new Vector<School>(); 
+	}
+	//methods
+	public void getData(String command) throws IOException {
+		
+             String line;
+             BufferedReader in;
+
+             in = new BufferedReader(new FileReader("SchoolDB.txt"));
+             line = in.readLine();
+
+             while(line != null)
+             {
+                    System.out.println(line);
+                    line = in.readLine();
+             }
+
+             System.out.println(line);
+        
+    }
+	public void setData() {
+		
+	}
+}

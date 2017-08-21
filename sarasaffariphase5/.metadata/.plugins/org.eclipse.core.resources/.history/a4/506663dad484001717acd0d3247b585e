@@ -1,0 +1,70 @@
+package services;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Vector;
+
+import entities.*;
+
+public class SchoolService {
+	
+	private Vector<School> allSchools;
+	//constructors
+	public SchoolService () {
+		Vector<School> allSchools = new Vector<School>(); 
+	}
+	//methods
+	public void getData(String filename) throws IOException {
+		
+         String line;
+         BufferedReader in;
+
+         in = new BufferedReader(new FileReader(filename));
+         line = in.readLine();
+
+         while(line != "$")
+         {
+        	 String schoolName;
+        	 line = in.readLine();
+        	 schoolName = line;
+        	 
+        	 int numberOfHouses = -1;
+        	 line = in.readLine();
+        	 numberOfHouses = Integer.parseInt(line);
+        	 ArrayList<House> _houses = new ArrayList<House>();
+        	 
+        	 for(; numberOfHouses > 0; numberOfHouses--) {
+        		line = in.readLine();
+        		_houses.add(new House(line));
+        	 }
+        	 
+        	 line = in.readLine();
+        	 int numberOfStudents = -1;
+        	 numberOfStudents = Integer.parseInt(line);
+        	 Vector<Student> _students = new Vector<Student>();
+        	 
+        	 for(;numberOfStudents > 0; numberOfStudents--) {
+        		 line = in.readLine();
+         		 _students.add(new Student(line));
+        	 }
+        	 
+        	 line = in.readLine();
+        	 int numberOfProfessors = -1;
+        	 numberOfProfessors = Integer.parseInt(line);
+        	 Vector<Professor> _professors =new Vector<Professor>();
+        	 
+        	 for(;numberOfProfessors > 0; numberOfProfessors--) {
+        		 line = in.readLine();
+         		 _professors.add(new Professor(line));
+        	 }
+         }
+
+         System.out.println(line);
+        
+    }
+	public void setData() {
+		
+	}
+}

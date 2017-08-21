@@ -1,0 +1,55 @@
+package services;
+
+import java.util.Scanner;
+import entities.*;
+
+public class SchoolService {
+/*  Gryffindor values bravery, daring, nerve, and chivalry. ...
+	Hufflepuff values hard work, dedication, patience, loyalty, and fair play. ...
+	Ravenclaw values intelligence, knowledge, and wit. ...
+	Slytherin house values ambition, cunning and resourcefulness and was founded by Salazar Slytherin.*/
+	//method for placing a new comer into one of 4 houses
+	public House SortingHat(Student s){
+		String result = "";
+		int Gryffindor = 0;
+		int Hufflepuff = 0;
+		int Ravenclaw = 0;
+		int Slythrin = 0;
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Welcome to sorting serimony!");
+		System.out.println("here is a quastionare to place you in one of four houses of Hagwarts.");
+		
+		System.out.println("1.Would you be a volinteere for something that you haven't tyied or even don't know what it is?(yes / no)");
+		String answer = scanner.nextLine();
+		if (answer == "yes"){ Gryffindor += 10;}
+		
+		System.out.println("2.Would you use your talanet, abilities and knowlage to deceive people?(yes / no)");
+		answer = scanner.nextLine();
+		if (answer == "yes"){ Slythrin += 10;}
+		
+		System.out.println("3.You have to work in a group.Would you dedicate your time and energy on the job?(yes / no)");
+		answer = scanner.nextLine();
+		if (answer == "yes"){ Hufflepuff +=10;}
+		
+		System.out.println("4.Are you capable of making right dicisions which are so important in a short period of time?(yes / no)");
+		answer = scanner.nextLine();
+		if (answer == "yes"){ Ravenclaw +=10;}
+		
+		System.out.println("5.Which is more important?(kindness / intelligence)");
+		answer = scanner.nextLine();
+		if (answer == "kindness"){ Gryffindor+=10;}
+		else { Ravenclaw += 10;}
+		
+		System.out.println("6.Which is more important?(patience / resourcefulness)");
+		answer = scanner.nextLine();
+		if (answer == "patience"){ Hufflepuff+=10;}
+		else { Slythrin += 10;}
+		
+		
+		House chosenHouse = new House();
+		chosenHouse.setName(result);
+		scanner.close();
+		return chosenHouse;
+	}
+}

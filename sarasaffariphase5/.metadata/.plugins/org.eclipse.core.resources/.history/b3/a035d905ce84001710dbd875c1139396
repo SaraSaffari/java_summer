@@ -1,0 +1,97 @@
+package services;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Vector;
+
+import entities.*;
+
+public class CourseService {
+	
+	private Vector<Course> allCourses;
+	//methods
+	public void getData(String filename) throws IOException {
+		
+		String line;
+	    BufferedReader in;
+
+        in = new BufferedReader(new FileReader(filename));
+        line = in.readLine();
+
+        while(line != "$")
+        {
+        	String courseName = "";
+        	line = in.readLine();
+        	courseName = line;
+	        	 
+        	Grades g = null;
+        	line = in.readLine();
+        	g = Grades.valueOf(line);
+        	
+        	line = in.readLine();
+        	String profName = line;
+        	Professor prof = new Professor(profName);
+        	
+        	line = in.readLine();
+        	int year = -1;
+        	year = Integer.parseInt(line);
+	        	 
+        	line = in.readLine();
+        	int numberOfStudents = -1;
+        	numberOfStudents = Integer.parseInt(line);
+        	Vector<Student> _students = new Vector<Student>();
+        	
+        	if (line != "N/A") {
+        		for(;numberOfStudents > 0; numberOfStudents--) {
+        			line = in.readLine();
+        			_students.add(new Student(line));
+        		 }
+        	}
+        	
+        	
+        	
+        	
+        	
+        	
+        	
+        	line = in.readLine();
+        	int numberOfProfessors = -1;
+        	numberOfProfessors = Integer.parseInt(line);
+        	Vector<Professor> _professors =new Vector<Professor>();
+	         
+        	if (line != "N/A") {
+    			for(;numberOfProfessors > 0; numberOfProfessors--) {
+        			 line = in.readLine();
+        			 _professors.add(new Professor(line));
+    			}
+        	}
+	        	 
+        	line = in.readLine();
+        	int numberOfCourses = -1;
+        	numberOfCourses = Integer.parseInt(line);
+        	ArrayList<Course> _courses= new ArrayList<Course>();
+	        	 
+        	if (line != "N/A") {
+        		for(; numberOfCourses >0; numberOfCourses--) {
+        			line = in.readLine();
+        			_courses.add(new Course(line));
+        		}
+        	}
+	        	 
+        	String location = "";
+        	line = in.readLine();
+        	location = line;
+        	 
+	        	 
+        	School new_School = new School(schoolName, numberOfStudents,  housed, _houses, _students, _professors, _courses, location);
+        	allSchools.add(new_School);
+        	in.close();
+         }
+    }
+	public void setData() {
+		
+	}
+
+}

@@ -1,0 +1,14 @@
+package services;
+
+import entities.*;
+public class SchoolService {
+
+	//method for placing a new comer into one of 4 houses
+	public House SortingHat(Student s){
+		House chosenHouse = new House();
+		
+		
+		
+		return chosenHouse;
+	}
+}

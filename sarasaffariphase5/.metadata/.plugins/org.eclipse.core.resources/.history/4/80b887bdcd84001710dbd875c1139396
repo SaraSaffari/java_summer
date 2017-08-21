@@ -1,0 +1,116 @@
+package services;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Vector;
+import entities.*;
+
+public class SchoolService {
+	
+	private Vector<School> allSchools;
+	
+	//constructors
+	public SchoolService () {
+		Vector<School> allSchools = new Vector<School>(); 
+	}
+	//methods
+	public void getData(String filename) throws IOException {
+		String line;
+        BufferedReader in;
+
+        in = new BufferedReader(new FileReader(filename));
+        line = in.readLine();
+
+        while(line != "$")
+        {
+        	String schoolName = "";
+        	line = in.readLine();
+        	schoolName = line;
+        	 
+        	int numberOfHouses = -1;
+        	boolean housed = true;
+        	line = in.readLine();
+        	numberOfHouses = Integer.parseInt(line);
+        	ArrayList<House> _houses = new ArrayList<House>();
+        	 
+        	if (line != "N/A") {
+        		for(; numberOfHouses > 0; numberOfHouses--) {
+        			line = in.readLine();
+        			_houses.add(new House(line));
+        		}
+        	}
+        	if(_houses.size() == 0){
+        		housed = false;
+        	}
+        		
+        	line = in.readLine();
+        	int numberOfStudents = -1;
+        	numberOfStudents = Integer.parseInt(line);
+        	Vector<Student> _students = new Vector<Student>();
+        	  
+        	if (line != "N/A") {
+        		for(;numberOfStudents > 0; numberOfStudents--) {
+        			line = in.readLine();
+        			_students.add(new Student(line));
+        		 }
+        	}
+        
+        	line = in.readLine();
+        	int numberOfProfessors = -1;
+        	numberOfProfessors = Integer.parseInt(line);
+        	Vector<Professor> _professors =new Vector<Professor>();
+         
+        	if (line != "N/A") {
+        			for(;numberOfProfessors > 0; numberOfProfessors--) {
+        			 line = in.readLine();
+        			 _professors.add(new Professor(line));
+        			}
+        	}
+        	 
+        	line = in.readLine();
+        	int numberOfCourses = -1;
+        	numberOfCourses = Integer.parseInt(line);
+        	ArrayList<Course> _courses= new ArrayList<Course>();
+        	 
+        	if (line != "N/A") {
+        		for(; numberOfCourses >0; numberOfCourses--) {
+        			line = in.readLine();
+        			_courses.add(new Course(line));
+        			}
+        	}
+        	 
+        	String location = "";
+        	line = in.readLine();
+        	location = line;
+        	 
+        	 
+        	School new_School = new School(schoolName, numberOfStudents,  housed, _houses, _students, _professors, _courses, location);
+        	allSchools.add(new_School);
+        	in.close();
+         }
+    }
+	
+	/*public void setData() {
+		BufferedWriter out = null;
+		try  
+		{
+		    FileWriter fstream = new FileWriter("out.txt", true); //true tells to append data.
+		    out = new BufferedWriter(fstream);
+		    out.write("\nsue");
+		}
+		catch (IOException e)
+		{
+		    System.err.println("Error: " + e.getMessage());
+		}
+		finally
+		{
+		    if(out != null) {
+		        out.close();
+		    }
+		}
+	}*/
+}

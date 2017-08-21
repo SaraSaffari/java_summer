@@ -1,0 +1,11 @@
+package services;
+
+/*  Gryffindor values bravery, daring, nerve, and chivalry. ...
+	Hufflepuff values hard work, dedication, patience, loyalty, and fair play. ...
+	Ravenclaw values intelligence, knowledge, and wit. ...
+	Slytherin house values ambition, cunning and resourcefulness and was founded by Salazar Slytherin.*/
+
+public class SortingHat {
+	
+
+}

@@ -1,0 +1,33 @@
+package services;
+
+import java.util.Scanner;
+import entities.*;
+
+public class SchoolService {
+
+	//method for placing a new comer into one of 4 houses
+	public House SortingHat(Student s){
+		String result = "";
+		int Gryffindor = 0;
+		int Hufflepuff = 0;
+		int Ravenclaw = 0;
+		int Slythrin = 0;
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Welcome to sorting serimony!");
+		System.out.println("here is a quastionare to place you in one of four houses of Hagwarts.");
+		System.out.println("1.Would you be a volinteere for something that you haven't tyied or even don't know what it is?(yes / no)");
+		String answer = scanner.nextLine();
+		if (answer == "yes"){ Gryffindor += 10;}
+		
+		System.out.println("2.Would you be eager to reach sth big and beyond imagination no matter how hard it is? (yes / no)");
+		answer = scanner.nextLine();
+		if (answer == "yes"){ Gryffindor += 10;}
+		
+		
+		
+		House chosenHouse = new House();
+		chosenHouse.setName(result);
+		return chosenHouse;
+	}
+}

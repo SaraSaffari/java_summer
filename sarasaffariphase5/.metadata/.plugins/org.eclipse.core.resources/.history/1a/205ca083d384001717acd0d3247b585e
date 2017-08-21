@@ -1,0 +1,49 @@
+package services;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Vector;
+
+import entities.*;
+
+public class SchoolService {
+	
+	private Vector<School> allSchools;
+	//constructors
+	public SchoolService () {
+		Vector<School> allSchools = new Vector<School>(); 
+	}
+	//methods
+	public void getData(String filename) throws IOException {
+		
+         String line;
+         BufferedReader in;
+
+         in = new BufferedReader(new FileReader(filename));
+         line = in.readLine();
+
+         while(line != "$")
+         {
+        	 String schoolName;
+        	 line = in.readLine();
+        	 schoolName = line;
+        	 
+        	 int numberOfHouses = -1;
+        	 line = in.readLine();
+        	 numberOfHouses = Integer.parseInt(line);
+        	 for(; numberOfHouses > 0; numberOfHouses--){
+        		line = in.readLine();
+        		
+        		
+        	 }
+        	 
+         }
+
+         System.out.println(line);
+        
+    }
+	public void setData() {
+		
+	}
+}

@@ -46,13 +46,6 @@ public class Main {
 		} catch (IOException e) {
 			System.err.println("Error: " + e.getMessage());
 		}
-		
-		ProfessorService pros = new ProfessorService();
-		try {
-			pros.getData(filename);
-		} catch (IOException e) {
-			System.err.println("Error: " + e.getMessage());
-		}
 	}
 	
 }

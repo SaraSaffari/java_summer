@@ -40,16 +40,9 @@ public class Main {
 			System.err.println("Error: " + e.getMessage());
 		}
 		
-		StudentService sts = new StudentService();
+		Service cs = new CourseService();
 		try {
-			sts.getData(filename);
-		} catch (IOException e) {
-			System.err.println("Error: " + e.getMessage());
-		}
-		
-		ProfessorService pros = new ProfessorService();
-		try {
-			pros.getData(filename);
+			cs.getData(filename);
 		} catch (IOException e) {
 			System.err.println("Error: " + e.getMessage());
 		}

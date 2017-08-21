@@ -11,15 +11,15 @@
 <coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="144" y="30"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.debug.ui.launch.toolbar" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="156" y="30"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="60" y="30"/>
 <coolItem id="org.eclipse.debug.ui.main.toolbar" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="88" y="30"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="124" y="30"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="60" y="30"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="68" y="30"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="232" y="30"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -28,16 +28,10 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Main.java" partName="Main.java" path="/home/sara/Documents/java_summer_codes/sarasaffariphase5/services_and_classes1/src/entities/Main.java" title="Main.java" tooltip="services_and_classes1/src/entities/Main.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/services_and_classes1/src/entities/Main.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="494" selectionTopPixel="48"/>
-</editor>
 </editors>
 <views>
 <view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
@@ -47,6 +41,7 @@
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
 <category IMemento.internal.id="Warnings (1 item)"/>
+<category IMemento.internal.id="Errors"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="340" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="418"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -75,7 +70,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.ui.resourcePerspective">
+<perspectives activePart="org.eclipse.ui.navigator.ProjectExplorer" activePerspective="org.eclipse.ui.resourcePerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.ui.internal.ide.application.ResourcePerspective" id="org.eclipse.ui.resourcePerspective" label="Resource"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -134,7 +129,7 @@
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.25940594" ratioLeft="262" ratioRight="748" relationship="2" relative="topLeft"/>
 <info folder="true" part="bottomRight" ratio="0.7237237" ratioLeft="482" ratioRight="184" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.views.TaskList" appearance="2" expanded="2">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
@@ -161,175 +156,7 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory>
-<editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/services_and_classes1/src/entities/Professor.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/services_and_classes1/src/services/ProfessorService.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/services_and_classes1/src/entities/Professor.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/services_and_classes1/src/services/PersonServices.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/services_and_classes1/src/services/StudentService.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/services_and_classes1/src/entities/Main.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/services_and_classes1/src/services/CourseService.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/services_and_classes1/src/services/HouseServices.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/services_and_classes1/src/services/SchoolService.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/services_and_classes1/src/services/ProfessorService.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/services_and_classes1/src/services/CourseService.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/services_and_classes1/src/services/PersonServices.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/services_and_classes1/src/services/HouseServices.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/services_and_classes1/src/services/SchoolService.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/services_and_classes1/src/services/StudentService.java"/>
-</editors>
-<item historyLabel="ProfessorService.java" index="1">
-<position info="not_deleted" x="1628" y="0"/>
-</item>
-<item historyLabel="ProfessorService.java" index="1">
-<position info="not_deleted" x="1918" y="0"/>
-</item>
-<item historyLabel="Professor.java" index="0">
-<position info="not_deleted" x="207" y="147"/>
-</item>
-<item historyLabel="ProfessorService.java" index="1">
-<position info="not_deleted" x="1473" y="0"/>
-</item>
-<item historyLabel="ProfessorService.java" index="1">
-<position info="not_deleted" x="959" y="0"/>
-</item>
-<item historyLabel="ProfessorService.java" index="1">
-<position info="not_deleted" x="107" y="0"/>
-</item>
-<item historyLabel="ProfessorService.java" index="1">
-<position info="not_deleted" x="1598" y="4"/>
-</item>
-<item historyLabel="Professor.java" index="2">
-<position info="not_deleted" x="517" y="0"/>
-</item>
-<item historyLabel="ProfessorService.java" index="1">
-<position info="not_deleted" x="812" y="175"/>
-</item>
-<item historyLabel="PersonServices.java" index="3">
-<position info="not_deleted" x="812" y="0"/>
-</item>
-<item historyLabel="StudentService.java" index="4">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="StudentService.java" index="4">
-<position info="not_deleted" x="847" y="0"/>
-</item>
-<item historyLabel="StudentService.java" index="4">
-<position info="not_deleted" x="107" y="0"/>
-</item>
-<item historyLabel="PersonServices.java" index="3">
-<position info="not_deleted" x="812" y="0"/>
-</item>
-<item historyLabel="ProfessorService.java" index="1">
-<position info="not_deleted" x="812" y="175"/>
-</item>
-<item historyLabel="Main.java" index="5">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Main.java" index="5">
-<position info="not_deleted" x="530" y="0"/>
-</item>
-<item historyLabel="CourseService.java" index="6">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="HouseServices.java" index="7">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="PersonServices.java" index="3">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="CourseService.java" index="6">
-<position info="not_deleted" x="1010" y="0"/>
-</item>
-<item historyLabel="HouseServices.java" index="7">
-<position info="not_deleted" x="952" y="5"/>
-</item>
-<item historyLabel="PersonServices.java" index="3">
-<position info="not_deleted" x="225" y="0"/>
-</item>
-<item historyLabel="ProfessorService.java" index="1">
-<position info="not_deleted" x="1635" y="5"/>
-</item>
-<item historyLabel="SchoolService.java" index="8">
-<position info="not_deleted" x="963" y="5"/>
-</item>
-<item historyLabel="StudentService.java" index="4">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="SchoolService.java" index="8">
-<position info="not_deleted" x="1445" y="5"/>
-</item>
-<item historyLabel="StudentService.java" index="4">
-<position info="not_deleted" x="1479" y="5"/>
-</item>
-<item historyLabel="Main.java" index="5">
-<position info="not_deleted" x="106" y="11"/>
-</item>
-<item historyLabel="Main.java" index="5">
-<position info="not_deleted" x="99" y="0"/>
-</item>
-<item historyLabel="Main.java" index="5">
-<position info="not_deleted" x="166" y="4"/>
-</item>
-<item historyLabel="ProfessorService.java" index="9">
-<position/>
-</item>
-<item historyLabel="CourseService.java" index="10">
-<position/>
-</item>
-<item historyLabel="ProfessorService.java" index="9">
-<position/>
-</item>
-<item historyLabel="PersonServices.java" index="11">
-<position/>
-</item>
-<item historyLabel="ProfessorService.java" index="9">
-<position/>
-</item>
-<item historyLabel="HouseServices.java" index="12">
-<position/>
-</item>
-<item historyLabel="ProfessorService.java" index="9">
-<position/>
-</item>
-<item historyLabel="Main.java" index="5">
-<position/>
-</item>
-<item historyLabel="SchoolService.java" index="13">
-<position/>
-</item>
-<item historyLabel="Main.java" index="5">
-<position/>
-</item>
-<item historyLabel="StudentService.java" index="14">
-<position info="not_deleted" x="407" y="4"/>
-</item>
-<item historyLabel="CourseService.java" index="10">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="HouseServices.java" index="12">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="PersonServices.java" index="11">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="ProfessorService.java" index="9">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="SchoolService.java" index="13">
-<position info="not_deleted" x="464" y="0"/>
-</item>
-<item historyLabel="StudentService.java" index="14">
-<position info="not_deleted" x="407" y="4"/>
-</item>
-<item historyLabel="SchoolService.java" index="13">
-<position info="not_deleted" x="464" y="0"/>
-</item>
-<item active="true" historyLabel="Main.java" index="5">
-<position/>
-</item>
-</navigationHistory>
+<navigationHistory/>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
@@ -346,14 +173,14 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StudentService.java" tooltip="services_and_classes1/src/services/StudentService.java">
+<persistable path="/services_and_classes1/src/services/StudentService.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SchoolService.java" tooltip="services_and_classes1/src/services/SchoolService.java">
 <persistable path="/services_and_classes1/src/services/SchoolService.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ProfessorService.java" tooltip="services_and_classes1/src/services/ProfessorService.java">
 <persistable path="/services_and_classes1/src/services/ProfessorService.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PersonServices.java" tooltip="services_and_classes1/src/services/PersonServices.java">
-<persistable path="/services_and_classes1/src/services/PersonServices.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HouseServices.java" tooltip="services_and_classes1/src/services/HouseServices.java">
 <persistable path="/services_and_classes1/src/services/HouseServices.java"/>
@@ -361,8 +188,8 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CourseService.java" tooltip="services_and_classes1/src/services/CourseService.java">
 <persistable path="/services_and_classes1/src/services/CourseService.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StudentService.java" tooltip="services_and_classes1/src/services/StudentService.java">
-<persistable path="/services_and_classes1/src/services/StudentService.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PersonServices.java" tooltip="services_and_classes1/src/services/PersonServices.java">
+<persistable path="/services_and_classes1/src/services/PersonServices.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Main.java" tooltip="services_and_classes1/src/entities/Main.java">
 <persistable path="/services_and_classes1/src/entities/Main.java"/>
